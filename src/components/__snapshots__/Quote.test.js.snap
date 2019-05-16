@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`quote displays quotes 1`] = `
+<div>
+  <img
+    src="/img"
+  />
+  <p>
+    Bob
+  </p>
+  <p>
+    no
+  </p>
+</div>
+`;
