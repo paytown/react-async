@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Quotes from '../components/Quotes';
-import Loading from '../Loading`';
+import Loading from '../Loading';
 import { getQuotes } from '../services/futuramaApi';
 
 export default class TopQuotes extends PureComponent {
