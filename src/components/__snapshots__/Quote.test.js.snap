@@ -3,7 +3,7 @@
 exports[`quote displays quotes 1`] = `
 <div>
   <img
-    src="img"
+    src="/img"
   />
   <p>
     Bob
