@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Quotes from '../components/Quotes';
+import Loading from '../Loading`';
 import { getQuotes } from '../services/futuramaApi';
 
 export default class TopQuotes extends PureComponent {
@@ -13,12 +14,14 @@ export default class TopQuotes extends PureComponent {
   }
 
   state = {
-    quotes: []
+    quotes: [],
+    loading: true
   }
 
   fetchQuotes = () => {
+    this.setState({ loading: true });
     getQuotes(this.props.count)
-      .then(quotes => this.setState({ quotes }));
+      .then(quotes => this.setState({ quotes, loading: false }));
   }
 
   componentDidMount() {
@@ -32,7 +35,8 @@ export default class TopQuotes extends PureComponent {
   }
 
   render() {
-    const { quotes } = this.state;
+    const { quotes, loading } = this.state;
+    if(loading) return <Loading />;
 
     return <Quotes quotes={quotes} />;
   }
