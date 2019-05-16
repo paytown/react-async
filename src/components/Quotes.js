@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Quote from './Quote';
+import style from './Quotes.css';
 
 function Quotes({ quotes }) {
   const quoteList = quotes.map((quote, i) => (
@@ -10,7 +11,7 @@ function Quotes({ quotes }) {
   )); 
 
   return (
-    <ul>
+    <ul className={style.List}>
       {quoteList}
     </ul>
   );
