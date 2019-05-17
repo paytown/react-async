@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`character render character card 1`] = `
+<div>
+  <img
+    src="/img"
+  />
+  <p>
+    Simple Rick
+  </p>
+  <p>
+    dead
+  </p>
+  <p>
+    rick
+  </p>
+</div>
+`;
